@@ -1,0 +1,23 @@
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: configure
+      run: ./configure
+    - name: make
+      run: make
+    - name: make check
+      run: make check
+    - name: make distcheck
+      run: make distcheck
+# Debian 7+
+# fool
+# fool
+wget https://github.com/tcp-nanqinlang/general/releases/download/3.4.1/tcp_nanqinlang-fool-1.2.1.sh
